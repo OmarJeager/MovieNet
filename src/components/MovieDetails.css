@@ -1,0 +1,106 @@
+/* MovieDetails.css */
+
+.movie-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .movie-poster {
+    flex: 1;
+    margin-right: 20px;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  .poster-image {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .poster-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .movie-info {
+    flex: 2;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .movie-release-date,
+  .movie-rating,
+  .movie-runtime {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #ccc;
+  }
+  
+  .movie-overview {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ddd;
+  }
+  
+  .watch-trailer-btn {
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .watch-trailer-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

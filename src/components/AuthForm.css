@@ -1,0 +1,246 @@
+/* AuthForm.css */
+
+/* Light theme (default) */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5; /* Light background */
+    color: #333; /* Dark text */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .auth-form {
+    background-color: #ffffff; /* Light form background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: 100%;
+    max-width: 400px;
+    animation: slideInUp 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Clock-like rotating border */
+  .auth-form::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      #ffcc00,
+      #e6b800,
+      #ffcc00,
+      #e6b800,
+      #ffcc00
+    );
+    animation: rotateClock 4s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes rotateClock {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .auth-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark text */
+    text-align: center;
+  }
+  
+  .welcome-message {
+    font-size: 1.1rem;
+    color: #666; /* Slightly lighter text */
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .welcome-message:hover {
+    color: #ffcc00; /* Highlight color on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form elements */
+  }
+  
+  .auth-input {
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light input background */
+    color: #333; /* Dark text */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .auth-input:focus {
+    border-color: #ffcc00; /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.3); /* Subtle glow */
+    outline: none;
+  }
+  
+  .auth-input.valid {
+    border-color: #4caf50; /* Green border for valid password */
+  }
+  
+  .auth-input.invalid {
+    border-color: #f44336; /* Red border for invalid password */
+  }
+  
+  .password-strength-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd; /* Light gray background */
+    border-radius: 5px;
+    margin-top: 10px; /* Space above the progress bar */
+    overflow: hidden;
+  }
+  
+  .password-strength-progress {
+    height: 100%;
+    background-color: #4caf50; /* Green progress bar */
+    transition: width 0.3s ease;
+  }
+  
+  .error-message {
+    color: #f44336; /* Red error text */
+    font-size: 0.9rem;
+    margin-top: 10px; /* Space above the error message */
+  }
+  
+  .auth-button {
+    padding: 10px;
+    background-color: #ffcc00; /* Yellow button */
+    color: #1c1c1c; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .auth-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #666; /* Light text */
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 15px; /* Space above the toggle button */
+  }
+  
+  .toggle-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+  }
+  
+  .reset-password-button {
+    background: none;
+    border: none;
+    color: #666; /* Light text */
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 15px; /* Space above the reset password button */
+  }
+  
+  .reset-password-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+  }
+  
+  .dark-mode-button {
+    padding: 10px;
+    background-color: #444; /* Dark button */
+    color: #fff; /* Light text */
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px; /* Space above the dark mode button */
+  }
+  
+  .dark-mode-button:hover {
+    background-color: #333; /* Darker background on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+  }
+  
+  /* Dark theme */
+  .auth-container.dark-mode {
+    background-color: #1c1c1c; /* Dark background */
+    color: #fff; /* Light text */
+  }
+  
+  .auth-container.dark-mode .auth-form {
+    background-color: #2c2c2c; /* Dark form background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dark shadow */
+  }
+  
+  .auth-container.dark-mode .auth-title {
+    color: #ffcc00; /* Yellow title */
+  }
+  
+  .auth-container.dark-mode .welcome-message {
+    color: #ccc; /* Light text */
+  }
+  
+  .auth-container.dark-mode .auth-input {
+    background-color: #3c3c3c; /* Dark input background */
+    color: #fff; /* Light text */
+    border-color: #444; /* Dark border */
+  }
+  
+  .auth-container.dark-mode .auth-input:focus {
+    border-color: #ffcc00; /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.5); /* Subtle glow */
+  }
+  
+  .auth-container.dark-mode .toggle-button {
+    color: #ccc; /* Light text */
+  }
+  
+  .auth-container.dark-mode .toggle-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }           
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

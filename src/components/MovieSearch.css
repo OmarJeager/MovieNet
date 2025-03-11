@@ -1,0 +1,60 @@
+.movie-search-container {
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+
+.movie-search-input {
+  padding: 10px;
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+}
+
+.movie-search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-search-button:hover {
+  background-color: #0056b3;
+}
+
+.movie-card {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.movie-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.movie-card p {
+  font-size: 14px;
+  color: #555;
+}
